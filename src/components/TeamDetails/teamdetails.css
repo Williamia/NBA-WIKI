@@ -1,0 +1,118 @@
+.content-details-teams{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.container-details-teams{
+    width: 95%;
+}
+
+.banner-teams{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -1px 4px 4px -2px rgba(0,0,0,0.53);
+    -webkit-box-shadow: -1px 4px 4px -2px rgba(0,0,0,0.53);
+    -moz-box-shadow: -1px 4px 4px -2px rgba(0,0,0,0.53);
+}
+
+.banner-teams-logo{
+    width: 350px;
+    height: 350px;
+    filter: grayscale(100%);
+    opacity: 0.1;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 100px;
+}
+
+.container-banner-teams{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.container-details-teams span{
+    margin: 40px;
+    font-size: 40px;
+}
+
+.content-image-details{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-text-details{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.content-image-details img{
+    width: 100%;
+    height: 100%;
+}
+
+.title-details-text{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    letter-spacing: 3px;
+}
+
+.title-details-text span{
+    text-transform: uppercase;
+    margin: 5px;
+    color: white;
+}
+
+.name-team-details{
+    font-size: 40px;
+}
+
+.info-team-details{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-team-details div span{
+    display: flex;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    letter-spacing: 3px;
+}
+
+.title-info-team{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.subtitle-info-team{
+    font-size: 20px;
+}
+
+.text-details-coach{
+    margin-right: 5%;
+}
+
+.text-details-city{
+    margin-left: 5%;
+}
