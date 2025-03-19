@@ -9,7 +9,7 @@ function TeamDetails(){
     const [error, setError] = useState("");
 
     useEffect(() => {
-        fetch(`http://localhost:5000/teams/${id}`)
+        fetch(`https://nba-wiki-api.vercel.app/teams/${id}`)
         .then((response) => {
             if(!response.ok) {
                 throw new Error("time not found");
