@@ -8,7 +8,7 @@ function Teams(){
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch("http://localhost:5000/teams")
+        fetch("https://nba-wiki-api.vercel.app/teams")
         .then((response) => response.json())
         .then((data) => setTeams(data))
         .catch((error) => console.error("error fatching teams:", error));
