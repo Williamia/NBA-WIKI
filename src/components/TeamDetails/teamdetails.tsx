@@ -1,6 +1,7 @@
 import "./teamdetails.css"
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Loader from "../Loader/loader";
 
 function TeamDetails(){
 
@@ -29,7 +30,7 @@ function TeamDetails(){
     }
 
     if (!team) {
-        return <p>Carregando...</p>;
+        return <Loader />;
     }
 
 

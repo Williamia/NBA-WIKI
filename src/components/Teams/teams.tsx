@@ -1,19 +1,30 @@
 import { useEffect, useState } from "react";
 import "./teams.css"
 import { useNavigate } from "react-router-dom";
+import Loader from "../Loader/loader";
 
 function Teams(){
 
     const [teams, setTeams] = useState<any[]>([]);
+    const [isLoading, setIsLoading] = useState(true); 
     const navigate = useNavigate();
 
     useEffect(() => {
         fetch("https://nba-wiki-api.vercel.app/teams")
-        .then((response) => response.json())
-        .then((data) => setTeams(data))
-        .catch((error) => console.error("error fatching teams:", error));
+            .then((response) => response.json())
+            .then((data) => {
+                setTeams(data);
+                setIsLoading(false); 
+            })
+            .catch((error) => {
+                console.error("Error fetching teams:", error);
+                setIsLoading(false); 
+            });
     }, []);
 
+    if (isLoading) {
+        return <Loader />; 
+    }
 
     return(
         <div className="content-teams">

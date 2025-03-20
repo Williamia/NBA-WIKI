@@ -1,5 +1,6 @@
 import "./players.css"
 import { useEffect, useState } from "react";
+import Loader from "../Loader/loader";
 
 function Players(){
 
@@ -32,15 +33,26 @@ function Players(){
         players: Player[]; 
       }
 
-    const [teams, setTeams] = useState<Team[]>([]);
-
-    useEffect(() => {
-        fetch("https://nba-wiki-api.vercel.app/teams")
-        .then((response) => response.json())
-        .then((data) => setTeams(data))
-        .catch((error) => console.error("error fatching teams:", error));
-    }, []);
-
+      const [teams, setTeams] = useState<Team[]>([]);
+      const [isLoading, setIsLoading] = useState(true); 
+  
+      useEffect(() => {
+          fetch("https://nba-wiki-api.vercel.app/teams")
+              .then((response) => response.json())
+              .then((data) => {
+                  setTeams(data);
+                  setIsLoading(false); 
+              })
+              .catch((error) => {
+                  console.error("Erro ao buscar times:", error);
+                  setIsLoading(false); 
+              });
+      }, []);
+  
+      if (isLoading) {
+          return <Loader />; 
+      }
+  
 
     return(
         <div className="content-players">
