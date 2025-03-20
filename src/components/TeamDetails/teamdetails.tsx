@@ -10,6 +10,7 @@ function TeamDetails(){
     const [error, setError] = useState("");
 
     useEffect(() => {
+        window.scrollTo(0,0);
         fetch(`https://nba-wiki-api.vercel.app/teams/${id}`)
         .then((response) => {
             if(!response.ok) {

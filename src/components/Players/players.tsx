@@ -37,6 +37,7 @@ function Players(){
       const [isLoading, setIsLoading] = useState(true); 
   
       useEffect(() => {
+        window.scrollTo(0,0);
           fetch("https://nba-wiki-api.vercel.app/teams")
               .then((response) => response.json())
               .then((data) => {
