@@ -560,6 +560,7 @@
     background-color: rgba(0, 0, 0, 0.979);
     color: white;
     opacity: 0;
+
 }
 
 .subcard-overlay-test5:hover{
@@ -579,7 +580,6 @@
     height: 100%;
     display: flex;
     justify-content: flex-end;
-    background-color: pink;
 }
 
 .card-overlay-test5-stats{
@@ -594,24 +594,30 @@
 }
 
 .stats-test5{
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     text-transform: uppercase;
     align-items: flex-end;
+    margin-right: 8%;
 }
 
 .title-stats-test5{
-    width: 100%;
+    width: 50%;
     font-size: 15px;
     text-align: center;
 }
 
 .value-stats-test5{
     text-align: center;
-    width: 100%;
+    width: 50%;
     font-size: 60px;
     font-weight: bolder;
+    }
+
+.value-stats-test5.ppg{
+    width: 100%;
+    text-align: end;
 }
 
 .team-img-card-overlay-tests5{
